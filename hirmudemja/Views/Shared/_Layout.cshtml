@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Fontdiner+Swanky&display=swap" rel="stylesheet">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img class="image" src="https://png2.cleanpng.com/sh/7039f412c6fb4af3a46ab17e9cc03ad9/L0KzQYm3VcIzN6F9kJH0aYP2gLBuTfhifZ95fdY2aHB4g7a0mf92fKZnfZ9sbHnzPbL5lL1pd6N3hAQ2aHB4g7a0VfIxO5dpe6Y7YkezR4G1V8I1P2g9S6o6NUK5SYmBUsI5OWg8UZD5bne=/kisspng-haunted-house-youtube-clip-art-horror-house-5b03fdc42b7070.7247783815269882281779.png">
+                @Html.ActionLink("Hirmudemaja", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Osta pilet", "OstaPilet", "hirmudemajas")</li>
+                    <li>@Html.ActionLink("Sisenes", "Sisenes", "hirmudemajas")</li>
+                    <li>@Html.ActionLink("Lahkus", "Lahkus", "hirmudemajas")</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

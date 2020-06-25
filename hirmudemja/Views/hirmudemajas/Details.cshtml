@@ -1,0 +1,42 @@
+﻿@model hirmudemja.Models.hirmudemaja
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>hirmudemaja</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Eesnimi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Eesnimi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sisenes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sisenes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lahkus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lahkus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
